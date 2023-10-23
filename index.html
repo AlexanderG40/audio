@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(184, 161, 31);
+        }
+
+        /*Style the player container*/
+        #player{
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(rgb(192, 67, 67), rgb(24, 75, 24), rgb(4, 4, 51), 0.1);
+        }
+
+        /*Style the audio controls (buttons) */
+        button{
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: darkblue;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This is the title-->
+    <title>My programming Music</title>
+</head>
+<body>
+    <!-- This is the start of my HTML section-->
+    <!-- This is the head of my body for the page-->
+    <h1>My programming Music</h1>
+    <!-- This is my paragraph.-->
+
+    <p>My programming Music</p>
+
+    <!--This is my player container-->
+    <div id="player">
+        <audio id="audio" src="SongR.mp3"></audio>
+        <!-- This is the audio controls-->
+        <!-- This is the play buttons-->
+        
+        <button onclick="playAudio()">Play</button>
+        <!--This makes the pause button pause-->
+        <button onclick="pauseAudio()">Pause</button>
+        <!--This is the stop button on page-->
+        <button onclick="stopAudio()">Stop</button>
+
+    </div>
+
+    <!-- Begin of JavaScript section-->
+
+    <script>
+        // Javascript variable that holds the audio element.
+        var audio = document.getElementById("audio");
+
+        // JavaScript function that stops the audio when the user raises this event by pressing the play button/
+
+        function playAudio() {
+            audio.play();
+        }
+
+        // JavaScript function that stops the audio when the user raises this event by pressing the pause button
+        function pauseAudio() {
+            audio.pause();
+        }
+
+
+        // JavaScript function that stops the audio when the user raises this event by pressing the stop btn.
+
+        function stopAudio() {
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    </script>
+</body>
+</html>
